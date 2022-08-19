@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Application Dashboard" />
+
+    <title>Storage Application Dashboard</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- End fonts -->
+
+    <!-- flatpickr css -->
+    <link rel="stylesheet" href="./assets/css/flatpickr.min.css" />
+    <!-- End flatpickr css -->
+
+    <!-- main styles -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <!-- End main styles -->
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <!-- Side Bar -->
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <a href="#" class="sidebar-brand"> S<span>AD</span> </a>
+          <!-- menu icon -->
+          <div class="sidebar-toggler not-active">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- nav item -->
+        <div class="sidebar-body">
+          <ul class="nav">
+            <!-- Dashboard -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="link-icon" data-feather="box"></i>
+                <span class="link-title">Dashboard</span>
+              </a>
+            </li>
+            <!-- Charts -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="link-icon" data-feather="pie-chart"></i>
+                <span class="link-title">Charts</span>
+              </a>
+            </li>
+            <!-- Charts -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="link-icon" data-feather="layout"></i>
+                <span class="link-title">Table</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End Side Bar -->
+      <div class="page-wrapper">
+        <!-- Navbar  -->
+        <nav class="navbar">
+          <a href="#" class="sidebar-toggler">
+            <i data-feather="menu"></i>
+          </a>
+          <div class="navbar-content">
+            <ul class="navbar-nav">
+              <!-- Notification  -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="notificationDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i data-feather="bell"></i>
+                  <div class="indicator">
+                    <div class="circle"></div>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu p-0"
+                  aria-labelledby="notificationDropdown"
+                >
+                  <div
+                    class="px-3 py-2 d-flex align-items-center justify-content-between border-bottom"
+                  >
+                    <p>1 New Notifications</p>
+                    <a href="javascript:;" class="text-muted">Clear all</a>
+                  </div>
+                  <div class="p-1">
+                    <a
+                      href="javascript:;"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <div
+                        class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3"
+                      >
+                        <img
+                          class="wd-30 ht-30 rounded-circle"
+                          src="./assets/images/faces/face6.jpg"
+                          alt="userr"
+                        />
+                      </div>
+                      <div class="flex-grow-1 me-2">
+                        <p>Customer sending invoice</p>
+                        <p class="tx-12 text-muted">just now</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="px-3 py-2 d-flex align-items-center justify-content-center border-top"
+                  >
+                    <a href="javascript:;">View all</a>
+                  </div>
+                </div>
+              </li>
+              <!-- Profile  -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="profileDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    class="wd-30 ht-30 rounded-circle"
+                    src="./assets/images/faces/face1.jpg"
+                    alt="profile"
+                  />
+                </a>
+                <div
+                  class="dropdown-menu p-0"
+                  aria-labelledby="profileDropdown"
+                >
+                  <div
+                    class="d-flex flex-column align-items-center border-bottom px-5 py-3"
+                  >
+                    <div class="mb-3">
+                      <img
+                        class="wd-80 ht-80 rounded-circle"
+                        src="./assets/images/faces/face1.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="text-center">
+                      <p class="tx-16 fw-bolder">Fran G. Pani.</p>
+                      <p class="tx-12 text-muted">fran@gmail.com</p>
+                    </div>
+                  </div>
+                  <ul class="list-unstyled p-1">
+                    <li class="dropdown-item py-2">
+                      <a
+                        href="pages/general/profile.html"
+                        class="text-body ms-0"
+                      >
+                        <i class="me-2 icon-md" data-feather="user"></i>
+                        <span>Profile</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-item py-2">
+                      <a href="javascript:;" class="text-body ms-0">
+                        <i class="me-2 icon-md" data-feather="edit"></i>
+                        <span>Edit Profile</span>
+                      </a>
+                    </li>
+                    <li class="dropdown-item py-2">
+                      <a href="javascript:;" class="text-body ms-0">
+                        <i class="me-2 icon-md" data-feather="log-out"></i>
+                        <span>Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <div class="page-content">
+          <div
+            class="d-flex justify-content-between align-items-center flex-wrap grid-margin"
+          >
+            <div>
+              <h1 class="mb-3 mb-md-0">Dashboard</h1>
+            </div>
+            <div class="d-flex align-items-center flex-wrap text-nowrap">
+              <div
+                class="input-group flatpickr wd-200 me-2 mb-2 mb-md-0"
+                id="dashboardDate"
+              >
+                <span
+                  class="input-group-text input-group-addon bg-transparent border-primary"
+                  data-toggle
+                  ><i data-feather="calendar" class="text-primary"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control bg-transparent border-primary"
+                  placeholder="Select date"
+                  data-input
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Quick info row -->
+          <div class="row">
+            <div class="col-12 col-xl-12 stretch-card">
+              <div class="row flex-grow-1">
+                <div class="col-md-4 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body green">
+                      <div
+                        class="d-flex justify-content-between align-items-baseline"
+                      >
+                        <h6 class="card-title mb-0">Earning</h6>
+                        <div class="dropdown mb-2">
+                          <a
+                            href="#"
+                            id="dropdownMenuButton"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i
+                              class="icon-lg text-muted pb-3px"
+                              data-feather="more-horizontal"
+                            ></i>
+                          </a>
+                          <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton"
+                          >
+                            <a
+                              class="dropdown-item d-flex align-items-center"
+                              href="javascript:;"
+                              ><i data-feather="eye" class="icon-sm me-2"></i>
+                              <span class="">View</span></a
+                            >
+                            <a
+                              class="dropdown-item d-flex align-items-center"
+                              href="javascript:;"
+                              ><i
+                                data-feather="edit-2"
+                                class="icon-sm me-2"
+                              ></i>
+                              <span class="">Edit</span></a
+                            >
+                            <a
+                              class="dropdown-item d-flex align-items-center"
+                              href="javascript:;"
+                              ><i data-feather="trash" class="icon-sm me-2"></i>
+                              <span class="">Delete</span></a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <!--Earning Card   -->
+                      <div class="row">
+                        <div class="col-6 col-md-12 col-xl-5">
+                          <h3 class="mb-2">$5,897</h3>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-success">
+                              <span>+18.2%</span>
+                              <i
+                                data-feather="arrow-up"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Earning  Graph -->
+                        <div class="col-6 col-md-12 col-xl-7">
+                          <div id="earningChart" class="mt-md-3 mt-xl-0"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body blue">
+                      <div
+                        class="d-flex justify-content-between align-items-baseline"
+                      >
+                        <h6 class="card-title mb-0">Sells</h6>
+                        <div class="dropdown mb-2">
+                          <a
+                            href="#"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i
+                              class="icon-lg text-muted pb-3px"
+                              data-feather="more-horizontal"
+                            ></i>
+                          </a>
+                          <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <a
+                              class="dropdown-item d-flex align-items-center"
+                              href="javascript:;"
+                              ><i data-feather="eye" class="icon-sm me-2"></i>
+                              <span class="">View</span></a
+                            >
+                            <a
+                              class="dropdown-item d-flex align-items-center"
+                              href="javascript:;"
+                              ><i
+                                data-feather="edit-2"
+                                class="icon-sm me-2"
+                              ></i>
+                              <span class="">Edit</span></a
+                            >
+                            <a
+                              class="dropdown-item d-flex align-items-center"
+                              href="javascript:;"
+                              ><i data-feather="trash" class="icon-sm me-2"></i>
+                              <span class="">Delete</span></a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Sells Card -->
+                      <div class="row">
+                        <div class="col-6 col-md-12 col-xl-5">
+                          <h3 class="mb-2">57,084</h3>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-danger">
+                              <span>-4.5%</span>
+                              <i
+                                data-feather="arrow-down"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Sells  Graph -->
+                        <div class="col-6 col-md-12 col-xl-7">
+                          <div id="sellsChart" class="mt-md-3 mt-xl-0"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body orange">
+                      <div
+                        class="d-flex justify-content-between align-items-baseline"
+                      >
+                        <h6 class="card-title mb-0">Income</h6>
+                        <div class="dropdown mb-2">
+                          <a
+                            href="#"
+                            id="dropdownMenuButton2"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i
+                              class="icon-lg text-muted pb-3px"
+                              data-feather="more-horizontal"
+                            ></i>
+                          </a>
+                          <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton2"
+                          >
+                            <a
+                              class="dropdown-item d-flex align-items-center"
+                              href="javascript:;"
+                              ><i data-feather="eye" class="icon-sm me-2"></i>
+                              <span class="">View</span></a
+                            >
+                            <a
+                              class="dropdown-item d-flex align-items-center"
+                              href="javascript:;"
+                              ><i
+                                data-feather="edit-2"
+                                class="icon-sm me-2"
+                              ></i>
+                              <span class="">Edit</span></a
+                            >
+                            <a
+                              class="dropdown-item d-flex align-items-center"
+                              href="javascript:;"
+                              ><i data-feather="trash" class="icon-sm me-2"></i>
+                              <span class="">Delete</span></a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Income Card -->
+                      <div class="row">
+                        <div class="col-6 col-md-12 col-xl-5">
+                          <h3 class="mb-2">90.87%</h3>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-success">
+                              <span>+5.4%</span>
+                              <i
+                                data-feather="arrow-up"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Income  Graph -->
+                        <div class="col-6 col-md-12 col-xl-7">
+                          <div id="incomeChart" class="mt-md-3 mt-xl-0"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Quick info row -->
+          <!-- Sales Bar chat & perfomer row -->
+          <div class="row">
+            <div class="col-lg-7 col-xl-8 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-baseline mb-2"
+                  >
+                    <h6 class="card-title mb-0">Sales Report</h6>
+                  </div>
+                  <p class="text-muted">Past 30 Days</p>
+                  <div id="monthlySalesChart"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Top Perfomer Card -->
+            <div class="col-lg-5 col-xl-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-baseline mb-2"
+                  >
+                    <h6 class="card-title mb-3">Top Performer</h6>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <a
+                      href="javascript:;"
+                      class="d-flex align-items-center border-bottom pb-3"
+                    >
+                      <div class="me-3">
+                        <img
+                          src="./assets/images/faces/face2.jpg"
+                          class="rounded-circle wd-35"
+                          alt="user"
+                        />
+                      </div>
+                      <div class="w-100">
+                        <div class="d-flex justify-content-between">
+                          <h6 class="text-body mb-2">Ty Ayelloribbin</h6>
+                          <p class="text-body tx-12">39%</p>
+                        </div>
+                        <p class="text-muted tx-13">@moderator</p>
+                      </div>
+                    </a>
+                    <a
+                      href="javascript:;"
+                      class="d-flex align-items-center border-bottom py-3"
+                    >
+                      <div class="me-3">
+                        <img
+                          src="./assets/images/faces/face3.jpg"
+                          class="rounded-circle wd-35"
+                          alt="user"
+                        />
+                      </div>
+                      <div class="w-100">
+                        <div class="d-flex justify-content-between">
+                          <h6 class="text-body mb-2">Percy Vere</h6>
+                          <p class="text-body tx-12">20%</p>
+                        </div>
+                        <p class="text-muted tx-13">@admin</p>
+                      </div>
+                    </a>
+                    <a
+                      href="javascript:;"
+                      class="d-flex align-items-center border-bottom py-3"
+                    >
+                      <div class="me-3">
+                        <img
+                          src="./assets/images/faces/face4.jpg"
+                          class="rounded-circle wd-35"
+                          alt="user"
+                        />
+                      </div>
+                      <div class="w-100">
+                        <div class="d-flex justify-content-between">
+                          <h6 class="text-body mb-2">Jack Aranda</h6>
+                          <p class="text-body tx-12">15%</p>
+                        </div>
+                        <p class="text-muted tx-13">@admin</p>
+                      </div>
+                    </a>
+                    <a
+                      href="javascript:;"
+                      class="d-flex align-items-center border-bottom py-3"
+                    >
+                      <div class="me-3">
+                        <img
+                          src="./assets/images/faces/face1.jpg"
+                          class="rounded-circle wd-35"
+                          alt="user"
+                        />
+                      </div>
+                      <div class="w-100">
+                        <div class="d-flex justify-content-between">
+                          <h6 class="text-body mb-2">Fran G. Pani.</h6>
+                          <p class="text-body tx-12">42%</p>
+                        </div>
+                        <p class="text-muted tx-13">@moderator</p>
+                      </div>
+                    </a>
+                    <a
+                      href="javascript:;"
+                      class="d-flex align-items-center border-bottom py-3"
+                    >
+                      <div class="me-3">
+                        <img
+                          src="./assets/images/faces/face6.jpg"
+                          class="rounded-circle wd-35"
+                          alt="user"
+                        />
+                      </div>
+                      <div class="w-100">
+                        <div class="d-flex justify-content-between">
+                          <h6 class="text-body mb-2">Ev R. Lasting</h6>
+                          <p class="text-body tx-12">68%</p>
+                        </div>
+                        <p class="text-muted tx-13">@admin</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Bar chat & perfomer row -->
+          <!-- Product History row -->
+          <div class="row">
+            <div class="col-lg-12 col-xl-12 stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-baseline mb-2"
+                  >
+                    <h6 class="card-title mb-0">History</h6>
+                    <div class="dropdown mb-2">
+                      <a
+                        href="#"
+                        id="dropdownMenuButton7"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          class="icon-lg text-muted pb-3px"
+                          data-feather="more-horizontal"
+                        ></i>
+                      </a>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton7"
+                      >
+                        <a
+                          class="dropdown-item d-flex align-items-center"
+                          href="javascript:;"
+                          ><i data-feather="eye" class="icon-sm me-2"></i>
+                          <span class="">View</span></a
+                        >
+                        <a
+                          class="dropdown-item d-flex align-items-center"
+                          href="javascript:;"
+                          ><i data-feather="edit-2" class="icon-sm me-2"></i>
+                          <span class="">Edit</span></a
+                        >
+                        <a
+                          class="dropdown-item d-flex align-items-center"
+                          href="javascript:;"
+                          ><i data-feather="trash" class="icon-sm me-2"></i>
+                          <span class="">Delete</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                      <thead>
+                        <tr>
+                          <th class="pt-0">No.</th>
+                          <th class="pt-0">Product Name</th>
+                          <th class="pt-0">Start Date</th>
+                          <th class="pt-0">Due Date</th>
+                          <th class="pt-0">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>
+                            Self Storage Units in St. Louis, MO at 725 N 23rd St
+                          </td>
+                          <td>01/08/2022</td>
+                          <td>02/08/2022</td>
+                          <td>
+                            <span class="badge bg-success">Released</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>
+                            Self Storage Units in Hamilton, OH at 1030 S Erie
+                            Blvd
+                          </td>
+                          <td>05/08/2022</td>
+                          <td>20/08/2022</td>
+                          <td><span class="badge bg-info">Equiped</span></td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>
+                            Self Storage Units in Milwaukee, WI at 2715 S 28th
+                            St
+                          </td>
+                          <td>08/08/2022</td>
+                          <td>08/08/2022</td>
+                          <td>
+                            <span class="badge bg-warning">Cancel</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>
+                            Self Storage Units in Sugar Land, TX at 4815 LJ Pkwy
+                          </td>
+                          <td>18/08/2022</td>
+                          <td>19/08/2022</td>
+                          <td>
+                            <span class="badge bg-danger">Payment Review</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Product History row -->
+        </div>
+
+        <!-- Footer -->
+        <footer
+          class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small"
+        >
+          <p class="text-muted mb-1 mb-md-0">
+            Copyright © 2022
+            <a href="#" target="_blank">Storage App Dashboard</a>.
+          </p>
+        </footer>
+        <!-- End Footer -->
+      </div>
+    </div>
+
+    <!-- Jquery  -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- End jquery -->
+
+    <!-- flatpicker Js-->
+    <script src="./assets/js/flatpickr.min.js"></script>
+    <!-- End flatpicker Js-->
+
+    <!-- apexcharts Js-->
+    <script src="./assets/js/apexcharts.min.js"></script>
+    <!-- End apexcharts Js -->
+
+    <!-- Feather js -->
+    <script src="./assets/js/feather.min.js"></script>
+    <!-- End Feather js -->
+
+    <!-- Dashboard App js -->
+    <script src="./assets/js/app.js"></script>
+    <!-- End Dashboard App js -->
+  </body>
+</html>
